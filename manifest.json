@@ -3,6 +3,10 @@
     "description": "A browser extension that find username and password field automatically and inject some text there and click on signin button from the code.",
     "version": "1.1",
     "manifest_version": 2,
+    "icons": { 
+        "32": "icons/icon-32.png",
+        "128": "icons/icon.png" 
+    },
     "permissions": [
         "tabs",
         "activeTab",
