@@ -1,5 +1,4 @@
 console.log('contentjs loaded', $);
-const config = require("config");
 let emailField;
 let pwField;
 
@@ -34,15 +33,15 @@ function findUserField() {
 }
 
 function findPasswordField() {
-    if ($('input[name="password"]').length) {
-        pwField = $('input[name="password"]');
-        pwField.val(_PASSWORD)
-    }
+     if ($('input[type="password"]').length) {
+        pwField = $('input[type="password"]');
+     }
+    if (pwField) pwField.val(_PASSWORD)
 }
 
 function loginOrGoToNextStep() {
     let element;
-    
+
     if ($("[id$='Next']").length) {
         element = $("[id$='Next']")
     } else if ($('button:contains("Sign in")').length) {
